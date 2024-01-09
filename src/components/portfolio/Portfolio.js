@@ -19,7 +19,7 @@ const portfolio = [
         title: "Blog App",
         live: "https://jate-bfguo.herokuapp.com", 
         description: "This application provides users platform to work on blogs by recording it by date, tags and CRUD operations.",
-        techStacks: ["Vue Js", "CRUD operations", "Json database", "Vue Template"],
+        techStacks: ["Vue Js", "CRUD operations", "Json database", "Vue Template", "Vuex"],
         source: "https://github.com/magickw/TextEditor",
         image: BlogApp
     },

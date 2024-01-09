@@ -1,11 +1,10 @@
 import React from 'react';
-import IconLink from "./IconLink";
 import { Box } from "@mui/material";
 import Stack from '@mui/joy/Stack';
 
 
 export default function ProjectCard(props) {
-   const { image, description, techStacks, live, source, title } = props;
+   const { image, description, techStacks, title } = props;
    const [isHover, setIsHover] = React.useState(false);
    return (
       <Box
@@ -34,7 +33,7 @@ export default function ProjectCard(props) {
                display: 'flex',
                justifyContent: 'center',
                alignItems: 'center',
-               fontSize: '1rem'
+               fontSize: '1rem',
             }}
             direction="row"
             spacing={5}
@@ -42,20 +41,11 @@ export default function ProjectCard(props) {
             <ul style={{ margin: 1, padding: 1, display: 'flex', flexWrap: 'wrap' }}>
                {techStacks.map((techStack) => (
                   <li key={techStack} style={{
-                     border: '1px solid green', borderRadius: '3px', padding: '1px', marginRight: '10px'
+                     border: '1px solid green', borderRadius: '8px', padding: '5px', marginRight: '10px', marginBottom: '5px', cursor: 'pointer'
                   }}>{techStack}</li>
                ))}
             </ul>
          </Stack>
-         <Box className={'portfolio'} display={'flex'} flexDirection={'row'} gap={'0.5rem'}
-            alignItems={'center'} fontSize={'1rem'} py={'1rem'} justifyContent={'space-between'}>
-            <Box p={1} border={'2px solid green'} borderRadius={'15px'}>
-               <IconLink link={live} title={'View Site'} icon={'fa fa-link'} />
-            </Box>
-            <Box p={1} border={'2px solid green'} borderRadius={'15px'}>
-               <IconLink link={source} title={'View Code'} icon={'fa fa-github'} />
-            </Box>
-         </Box>
       </Box>
    );
 }
